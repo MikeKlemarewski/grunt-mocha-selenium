@@ -75,6 +75,7 @@ module.exports = function(grunt) {
       }
 
       var remote = options.usePromises ? 'promiseRemote' : 'remote';
+      remote = options.useChaining ? 'promiseChainRemote' : remote;
       var browser = wd[remote](selenium.host, selenium.port);
 
       var opts = {
